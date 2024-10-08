@@ -1,4 +1,4 @@
-package com.ahtesam.rest.webservice.exception;
+package com.ahtesam.rest.webservice.restfulwebservices.exception;
 
 import java.time.LocalDateTime;
 
