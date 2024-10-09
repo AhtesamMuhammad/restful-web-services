@@ -12,9 +12,9 @@ public class User {
     @Size(min = 3, message = "name should have 3 characters")
     private String name;
 
-    @Past
+    @Past(message = "Birth Date should be in the past")
     private LocalDate birthDate;
-    
+
     public User(Integer id, String name, LocalDate birthDate) {
         this.id = id;
         this.name = name;
@@ -50,5 +50,4 @@ public class User {
         return "User [id=" + id + ", name=" + name + ", birthDate=" + birthDate + "]";
     }
 
-    
 }
