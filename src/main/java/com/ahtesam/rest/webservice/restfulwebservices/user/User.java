@@ -8,7 +8,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.validation.constraints.Past;
 import jakarta.validation.constraints.Size;
 
-@JsonIgnoreProperties
 public class User {
 
     private Integer id;
