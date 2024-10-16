@@ -1,7 +1,7 @@
 package com.ahtesam.rest.webservice.restfulwebservices.filtering;
 
 import com.fasterxml.jackson.annotation.JsonFilter;
-import com.fasterxml.jackson.annotation.JsonIgnore;
+
 
 @JsonFilter("SomeBeanFilter")
 public class SomeBean {

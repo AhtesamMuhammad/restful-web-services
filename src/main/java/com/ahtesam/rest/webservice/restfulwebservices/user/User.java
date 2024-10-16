@@ -2,15 +2,24 @@ package com.ahtesam.rest.webservice.restfulwebservices.user;
 
 import java.time.LocalDate;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
 import jakarta.validation.constraints.Past;
 import jakarta.validation.constraints.Size;
 
+@Entity(name = "user_details")
 public class User {
 
-    private Integer id;
+    protected User (){
+
+    }
+    
+    @Id
+	@GeneratedValue
+	private Integer id;
 
     @Size(min = 3, message = "name should have 3 characters")
     @JsonProperty("user_name")
