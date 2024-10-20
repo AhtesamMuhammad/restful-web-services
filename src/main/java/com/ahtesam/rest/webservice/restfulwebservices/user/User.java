@@ -16,13 +16,13 @@ import jakarta.validation.constraints.Size;
 @Entity(name = "user_details")
 public class User {
 
-    protected User (){
+    protected User() {
 
     }
-    
+
     @Id
-	@GeneratedValue
-	private Integer id;
+    @GeneratedValue
+    private Integer id;
 
     @Size(min = 3, message = "name should have 3 characters")
     @JsonProperty("user_name")
@@ -64,6 +64,14 @@ public class User {
 
     public void setBirthDate(LocalDate birthDate) {
         this.birthDate = birthDate;
+    }
+
+    public List<Post> getPosts() {
+        return posts;
+    }
+
+    public void setPosts(List<Post> posts) {
+        this.posts = posts;
     }
 
     @Override
